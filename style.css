@@ -91,3 +91,11 @@ body{background:#eef3ef;color:#17251e}
  .preview-stage{height:56vw;min-height:190px}.timeline-wrap{padding:8px 7px}
  .inspector-panel{padding:14px 11px}.site-footer{padding:10px;gap:8px}
 }
+
+.brand-mark{overflow:hidden;background:#fff;padding:2px}
+.brand-mark img{width:100%;height:100%;object-fit:contain;border-radius:10px}
+.preview-stage video{object-fit:contain;background:#101b14}
+.preview-stage.has-video{background:#101b14}
+.preview-stage.has-video .preview-empty{display:none}
+.preview-stage video::-webkit-media-controls-panel{background:linear-gradient(transparent,#14251c)}
+.track-lane{cursor:crosshair}
