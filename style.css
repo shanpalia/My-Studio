@@ -16,3 +16,56 @@
 .preview-stage{box-shadow:inset 0 0 0 1px #ffffff0d}
 .upload-card{transition:.2s}
 @media(max-width:760px){.brand small{font-size:6px;letter-spacing:.7px}.brand>span:last-child{font-size:17px}.site-footer{padding:12px;gap:8px;flex-wrap:wrap;font-size:8px}.project-brand,.project-divider{display:none}}
+
+
+/* Premium My Studio workspace polish */
+:root{--mint:#c9f4df;--mint-strong:#269c69;--ink:#172820;--muted:#82948a;--line:#e5eee8;--bg:#f3f8f5}
+body{background:#f3f8f5;color:#1b2c23}
+.topbar{height:72px;padding:0 26px;background:rgba(255,255,255,.96);box-shadow:0 2px 14px rgba(24,63,43,.035);backdrop-filter:blur(12px)}
+.brand-mark{height:40px;width:40px;border-radius:13px;box-shadow:0 5px 14px #178c5c20}
+.brand>span:last-child{font-size:21px}
+.app-shell{min-height:calc(100vh - 120px);grid-template-columns:74px 270px minmax(420px,1fr) 290px}
+.tool-rail{padding-top:22px;gap:10px;background:#fff}
+.tool{width:60px;padding:13px 4px;border-radius:13px;transition:background .18s,color .18s,transform .18s}
+.tool:hover{transform:translateY(-1px);background:#f2faf5}
+.tool.active{background:#e2f7eb;color:#168356;box-shadow:inset 0 0 0 1px #c7ebd6}
+.asset-panel,.properties-panel{padding:25px 18px;background:#fff}
+.panel-heading h2,.editor-top h2{font-size:18px;letter-spacing:-.55px}
+.eyebrow{font-size:9px;letter-spacing:1.8px;color:#91a398}
+.tabs{gap:17px;margin-top:22px}
+.tab{font-size:11px;padding-bottom:12px}
+.upload-card{padding:23px 12px;border:1.5px dashed #b7ddc7;background:linear-gradient(145deg,#f7fcf8,#f0faf4);border-radius:15px}
+.upload-icon{width:38px;height:38px;font-size:24px;border-radius:12px}
+.browse-btn{padding:8px 16px;border-radius:8px}
+.editor{padding:25px 25px 22px;min-width:0}
+.editor-top{margin-bottom:16px}
+.preview-stage{height:min(42vw,470px);min-height:290px;border-radius:16px;background:radial-gradient(ellipse at 50% 42%,#34453b 0%,#1d2b23 55%,#111b15 100%);box-shadow:0 12px 35px rgba(19,40,27,.12),inset 0 0 0 1px #ffffff12}
+.preview-empty{max-width:300px}
+.play-graphic{width:54px;height:54px;border-color:#8ab39b;color:#bdf3d7;background:#ffffff0a}
+.preview-empty h3{font-size:19px;letter-spacing:-.45px}
+.preview-empty p{font-size:12px;color:#b1c2b8}
+.primary-btn{padding:11px 19px;border-radius:10px;background:linear-gradient(135deg,#168a5b,#2ab77c);box-shadow:0 7px 18px #1b9a672d}
+.transport{height:60px}
+.transport-controls{gap:18px}
+.transport-controls .play-btn{height:36px;width:36px;box-shadow:0 3px 10px #239d6b25}
+.timeline-wrap{margin-top:19px;border-radius:14px;padding:15px 15px 12px;box-shadow:0 5px 18px rgba(25,66,43,.035)}
+.timeline-toolbar{min-height:27px}
+.timeline-title strong{font-size:14px}
+.action-btn{padding:7px 10px;border-radius:8px;background:#fbfdfb}
+.action-btn:first-child{color:#17885a;border-color:#ccebd8;background:#f2fbf5}
+.ruler{margin-top:18px}
+.track-lanes{grid-template-rows:repeat(3,46px)}
+.track-labels{grid-template-rows:repeat(3,46px);font-weight:600}
+.track-lane{border-bottom:1px solid #edf3ef}
+.clip-block{top:7px;height:32px;border-radius:7px}
+.clip-block.selected{outline:2px solid #249e69;box-shadow:0 2px 9px #249e6925}
+.properties-panel{box-shadow:-5px 0 18px rgba(25,66,43,.018)}
+.property-section{padding-top:18px;margin-top:17px}
+.property-section h3{font-size:11px;letter-spacing:.2px}
+.selected-card{border:1px solid #edf3ef;background:#f8fbf9;padding:11px;border-radius:11px}
+.outline-wide{border-color:#c8e9d5;background:#f9fdfa;padding:9px;border-radius:8px}
+.help-note{border:1px solid #e2f3e9;background:#f2faf5;border-radius:10px;padding:11px}
+.site-footer{min-height:48px;padding-left:96px;background:#10251d}
+.toast{border:1px solid #ffffff18;box-shadow:0 8px 30px #07140d44}
+@media(max-width:1150px){.app-shell{grid-template-columns:66px 240px minmax(350px,1fr)}.editor{padding:20px}.properties-panel{padding:18px}.preview-stage{height:38vw}}
+@media(max-width:760px){.topbar{height:60px;padding:0 12px}.app-shell{grid-template-columns:52px minmax(0,1fr)}.asset-panel,.properties-panel{padding:17px 12px}.editor{padding:16px 11px}.preview-stage{height:58vw;min-height:220px;border-radius:12px}.timeline-wrap{border-radius:11px}.site-footer{padding:12px;justify-content:center;text-align:center}}
