@@ -5,12 +5,12 @@
 <meta name="theme-color" content="#f4faf6">
 <meta name="description" content="My Studio by PALIAAPK HUB — your creative video editing workspace.">
 <meta property="og:title" content="My Studio — PALIAAPK HUB"><meta property="og:description" content="Your creativity. Your timeline. Your studio.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg"><title>My Studio — PALIAAPK HUB</title>
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/shanpalia/WebsitePaliaAPK_V.2/main/assets/paliaapk-hub-icon.png"><title>My Studio — PALIAAPK HUB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
 </head><body>
 <header class="topbar">
- <a class="brand" href="#"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M7 29V11h5l8 10 8-10h5v18h-6V20l-7 8-7-8v9z" fill="currentColor"/><circle cx="32" cy="8" r="5" fill="#2cb879"/></svg></span><span class="brand-copy">My Studio<small>BY PALIAAPK HUB</small></span></a>
+ <a class="brand" href="#"><span class="brand-mark"><img src="https://raw.githubusercontent.com/shanpalia/WebsitePaliaAPK_V.2/main/assets/paliaapk-hub-icon.png" alt="PaliaAPK HUB logo"></span><span class="brand-copy">My Studio<small>BY PALIAAPK HUB</small></span></a>
  <div class="project-center"><span class="saved-dot"></span><span class="project-label">PROJECT</span><span class="project-divider">/</span><span id="projectTitle">Untitled project</span><button id="renameBtn" class="rename-btn" title="Rename project">✎</button><span class="saved-status">All changes local</span></div>
  <div class="top-actions"><button class="top-icon" id="undoBtn" title="Undo">↶</button><button class="top-icon" id="redoBtn" title="Redo">↷</button><button class="export-btn" id="exportBtn"><span>Export video</span><b>↗</b></button></div>
 </header>
@@ -35,7 +35,7 @@
   <div class="work-heading"><div><span class="section-kicker">EDITING WORKSPACE</span><h1>Make something <em>great.</em></h1></div><div class="canvas-actions"><button class="small-btn" id="fitBtn">Fit to screen⌄</button><button class="small-btn square-btn" id="fullscreenBtn">⛶</button></div></div>
   <div class="preview-shell"><div class="preview-meta"><span><i class="rec-dot"></i> LIVE PREVIEW</span><span class="preview-ratio">16:9 <b>HD</b></span></div>
    <div class="preview-stage" id="previewStage"><div class="preview-empty" id="previewEmpty"><div class="empty-play">▶</div><h3>Your next creation starts here</h3><p>Import a video and bring your ideas to life.</p><button class="primary-btn" id="startUploadBtn">＋ Import video</button></div>
-    <video id="previewVideo" playsinline></video><img id="photoOverlay" alt="" hidden><div id="textOverlay" hidden>Double-click to edit text</div><div class="stage-watermark">MY STUDIO <b>✳</b></div>
+    <video id="previewVideo" playsinline controlslist="nodownload"></video><img id="photoOverlay" alt="" hidden><div id="textOverlay" hidden>Double-click to edit text</div><div class="stage-watermark">MY STUDIO <b>✳</b></div>
    </div>
    <div class="transport"><div class="time-display"><strong id="currentTime">00:00.0</strong><span class="time-slash">/</span><span id="totalTime">00:00.0</span></div><div class="transport-controls"><button id="backBtn" title="Back 5 seconds">↶</button><button class="play-btn" id="playBtn" title="Play">▶</button><button id="forwardBtn" title="Forward 5 seconds">↷</button></div><div class="transport-right"><span>PREVIEW QUALITY</span><b>FULL HD</b></div></div>
   </div>
