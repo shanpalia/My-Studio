@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f5fbf8">
+<meta name="theme-color" content="#10251d">
+<meta name="description" content="My Studio by PALIAAPK HUB — create, trim and edit videos with music, photos and text in one simple online studio.">
+<meta property="og:title" content="My Studio — Video Editor by PALIAAPK HUB">
+<meta property="og:description" content="Your creativity. Your timeline. Your studio.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <title>My Studio — Video Editor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -10,8 +14,8 @@
 </head>
 <body>
 <header class="topbar">
- <a class="brand" href="#"><span class="brand-mark">M<span>+</span></span><span>my studio<small>BY PALIAAPK HUB</small></span></a>
- <div class="project-name"><span class="live-dot"></span><span id="projectTitle">Untitled project</span><button id="renameBtn" class="icon-btn" title="Rename project">✎</button></div>
+ <a class="brand" href="#" aria-label="My Studio by PaliaAPK Hub"><span class="brand-mark">M<span>+</span></span><span>my studio<small>CREATIVE VIDEO STUDIO · BY PALIAAPK HUB</small></span></a>
+ <div class="project-name"><span class="live-dot"></span><span class="project-brand">PALIA CREATIVE WORKSPACE</span><span class="project-divider">/</span><span id="projectTitle">Untitled project</span><button id="renameBtn" class="icon-btn" title="Rename project">✎</button></div>
  <div class="top-actions"><button class="quiet-btn" id="undoBtn">↶ Undo</button><button class="quiet-btn" id="redoBtn">↷ Redo</button><button class="export-btn" id="exportBtn">Export video <span>↗</span></button></div>
 </header>
 <main class="app-shell">
@@ -63,6 +67,7 @@
   <div class="help-note">Your project is processed locally in this browser. Keep this tab open while exporting.</div>
  </aside>
 </main>
+<footer class="site-footer"><span class="footer-brand">MY STUDIO <i>×</i> PALIAAPK HUB</span><span>Make every frame yours.</span><a href="https://github.com/shanpalia" target="_blank" rel="noopener">DEVELOPED BY SHANPALIA ↗</a></footer>
 <input type="file" id="fileInput" accept="video/*,audio/*,image/*" multiple hidden>
 <input type="file" id="videoInput" accept="video/*" hidden>
 <input type="file" id="audioInput" accept="audio/*" hidden>
