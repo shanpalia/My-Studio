@@ -2,78 +2,60 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#10251d">
-<meta name="description" content="My Studio by PALIAAPK HUB — create, trim and edit videos with music, photos and text in one simple online studio.">
-<meta property="og:title" content="My Studio — Video Editor by PALIAAPK HUB">
-<meta property="og:description" content="Your creativity. Your timeline. Your studio.">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<title>My Studio — Video Editor</title>
+<meta name="theme-color" content="#f4faf6">
+<meta name="description" content="My Studio by PALIAAPK HUB — your creative video editing workspace.">
+<meta property="og:title" content="My Studio — PALIAAPK HUB"><meta property="og:description" content="Your creativity. Your timeline. Your studio.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><title>My Studio — PALIAAPK HUB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+</head><body>
 <header class="topbar">
- <a class="brand" href="#" aria-label="My Studio by PaliaAPK Hub"><span class="brand-mark">M<span>+</span></span><span>my studio<small>CREATIVE VIDEO STUDIO · BY PALIAAPK HUB</small></span></a>
- <div class="project-name"><span class="live-dot"></span><span class="project-brand">PALIA CREATIVE WORKSPACE</span><span class="project-divider">/</span><span id="projectTitle">Untitled project</span><button id="renameBtn" class="icon-btn" title="Rename project">✎</button></div>
- <div class="top-actions"><button class="quiet-btn" id="undoBtn">↶ Undo</button><button class="quiet-btn" id="redoBtn">↷ Redo</button><button class="export-btn" id="exportBtn">Export video <span>↗</span></button></div>
+ <a class="brand" href="#"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M7 29V11h5l8 10 8-10h5v18h-6V20l-7 8-7-8v9z" fill="currentColor"/><circle cx="32" cy="8" r="5" fill="#2cb879"/></svg></span><span class="brand-copy">My Studio<small>BY PALIAAPK HUB</small></span></a>
+ <div class="project-center"><span class="saved-dot"></span><span class="project-label">PROJECT</span><span class="project-divider">/</span><span id="projectTitle">Untitled project</span><button id="renameBtn" class="rename-btn" title="Rename project">✎</button><span class="saved-status">All changes local</span></div>
+ <div class="top-actions"><button class="top-icon" id="undoBtn" title="Undo">↶</button><button class="top-icon" id="redoBtn" title="Redo">↷</button><button class="export-btn" id="exportBtn"><span>Export video</span><b>↗</b></button></div>
 </header>
-<main class="app-shell">
- <aside class="tool-rail">
+<main class="studio-layout">
+ <nav class="tool-rail" aria-label="Editing tools">
   <button class="tool active" data-tool="media"><b>▧</b><span>Media</span></button>
   <button class="tool" data-tool="audio"><b>♫</b><span>Audio</span></button>
   <button class="tool" data-tool="text"><b>T</b><span>Text</span></button>
   <button class="tool" data-tool="image"><b>▣</b><span>Photo</span></button>
-  <button class="tool" data-tool="settings"><b>⚙</b><span>Settings</span></button>
-  <div class="rail-bottom"><span class="avatar">SP</span></div>
+  <button class="tool" data-tool="settings"><b>⚙</b><span>Canvas</span></button>
+  <div class="rail-spacer"></div><div class="avatar">SP</div><span class="rail-caption">SHANPALIA</span>
+ </nav>
+ <aside class="media-panel">
+  <div class="panel-top"><div><span class="section-kicker">YOUR PROJECT</span><h2 id="panelTitle">Media library</h2></div><button class="add-square" id="addMediaBtn">＋</button></div>
+  <div class="media-tabs"><button class="tab active" data-tab="all">All</button><button class="tab" data-tab="video">Video</button><button class="tab" data-tab="audio">Audio</button><button class="tab" data-tab="image">Photo</button></div>
+  <div class="drop-card" id="dropZone"><div class="drop-symbol">↑</div><strong>Import your media</strong><span>Drag files here or browse</span><button class="browse-btn" id="browseBtn">Browse files</button><small>VIDEO · AUDIO · IMAGE</small></div>
+  <div class="library-heading"><span>PROJECT FILES</span><span id="libraryCount">0 ITEMS</span></div>
+  <div class="media-list" id="mediaList"><div class="empty-state"><div class="empty-art">▧</div><p>Your imported files will appear here.</p></div></div>
+  <div class="storage-note"><i></i> Your files stay on this device</div>
  </aside>
- <section class="asset-panel">
-  <div class="panel-heading"><div><p class="eyebrow">WORKSPACE</p><h2 id="panelTitle">Your media</h2></div><button class="round-add" id="addMediaBtn">+</button></div>
-  <div class="tabs"><button class="tab active" data-tab="all">All files</button><button class="tab" data-tab="video">Video</button><button class="tab" data-tab="audio">Audio</button><button class="tab" data-tab="image">Images</button></div>
-  <div class="upload-card" id="dropZone"><div class="upload-icon">↑</div><strong>Drop files here</strong><span>or browse from your device</span><button class="browse-btn" id="browseBtn">Browse files</button><small>MP4 · MOV · MP3 · JPG · PNG</small></div>
-  <div class="media-list" id="mediaList"><div class="empty-state"><span>▧</span><p>Your uploaded files will appear here.</p></div></div>
-  <div class="panel-footer"><span class="storage-dot"></span> Files stay on your device</div>
- </section>
- <section class="editor">
-  <div class="editor-top"><div><p class="eyebrow">PREVIEW CANVAS</p><h2>Video preview</h2></div><div class="canvas-actions"><button class="small-btn" id="fitBtn">Fit <span>⌄</span></button><button class="small-btn" id="fullscreenBtn">⛶</button></div></div>
-  <div class="preview-stage" id="previewStage">
-   <div class="preview-empty" id="previewEmpty"><div class="play-graphic">▶</div><h3>Your story starts here</h3><p>Upload a video to begin editing</p><button class="primary-btn" id="startUploadBtn">＋ Upload video</button></div>
-   <video id="previewVideo" playsinline></video><img id="photoOverlay" alt="" hidden><div id="textOverlay" hidden>Double-click to edit text</div>
-   <div class="stage-watermark">MY STUDIO</div>
-  </div>
-  <div class="transport"><div class="time-display"><strong id="currentTime">00:00.0</strong><span>/</span><span id="totalTime">00:00.0</span></div><div class="transport-controls"><button id="backBtn" title="Back 5 seconds">↶</button><button class="play-btn" id="playBtn" title="Play">▶</button><button id="forwardBtn" title="Forward 5 seconds">↷</button></div><div class="preview-quality">PREVIEW <b>HD</b></div></div>
-  <section class="timeline-wrap">
-   <div class="timeline-toolbar"><div class="timeline-title"><strong>Timeline</strong><span id="clipCount">0 clips</span></div><div class="edit-actions"><button id="splitBtn" class="action-btn">✂ Split</button><button id="deleteBtn" class="action-btn">⌫ Delete</button><button id="addTrackBtn" class="action-btn">＋ Track</button><span class="toolbar-sep"></span><button id="zoomOut" class="zoom-btn">−</button><input type="range" min="30" max="150" value="70" id="zoomRange"><button id="zoomIn" class="zoom-btn">+</button></div></div>
-   <div class="ruler" id="ruler"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span><span>00:20</span><span>00:25</span></div>
-   <div class="tracks-area" id="tracksArea">
-    <div class="track-labels"><div>▣ Video</div><div>▧ Overlay</div><div>♫ Audio</div></div>
-    <div class="track-lanes">
-     <div class="track-lane" id="videoLane"><div class="lane-placeholder">Add a video to the timeline</div></div>
-     <div class="track-lane" id="overlayLane"></div>
-     <div class="track-lane" id="audioLane"></div>
-     <div class="playhead" id="playhead"><i></i></div>
-    </div>
+ <section class="work-area">
+  <div class="work-heading"><div><span class="section-kicker">EDITING WORKSPACE</span><h1>Make something <em>great.</em></h1></div><div class="canvas-actions"><button class="small-btn" id="fitBtn">Fit to screen⌄</button><button class="small-btn square-btn" id="fullscreenBtn">⛶</button></div></div>
+  <div class="preview-shell"><div class="preview-meta"><span><i class="rec-dot"></i> LIVE PREVIEW</span><span class="preview-ratio">16:9 <b>HD</b></span></div>
+   <div class="preview-stage" id="previewStage"><div class="preview-empty" id="previewEmpty"><div class="empty-play">▶</div><h3>Your next creation starts here</h3><p>Import a video and bring your ideas to life.</p><button class="primary-btn" id="startUploadBtn">＋ Import video</button></div>
+    <video id="previewVideo" playsinline></video><img id="photoOverlay" alt="" hidden><div id="textOverlay" hidden>Double-click to edit text</div><div class="stage-watermark">MY STUDIO <b>✳</b></div>
    </div>
-   <div class="timeline-hint">Tip: Move the playhead and select <b>Split</b> to cut your video into separate parts.</div>
+   <div class="transport"><div class="time-display"><strong id="currentTime">00:00.0</strong><span class="time-slash">/</span><span id="totalTime">00:00.0</span></div><div class="transport-controls"><button id="backBtn" title="Back 5 seconds">↶</button><button class="play-btn" id="playBtn" title="Play">▶</button><button id="forwardBtn" title="Forward 5 seconds">↷</button></div><div class="transport-right"><span>PREVIEW QUALITY</span><b>FULL HD</b></div></div>
+  </div>
+  <section class="timeline-wrap"><div class="timeline-toolbar"><div class="timeline-title"><div class="timeline-icon">⌁</div><div><strong>Timeline</strong><small id="clipCount">0 clips · Start creating</small></div></div><div class="edit-actions"><button id="splitBtn" class="action-btn split-action">✂ <span>Split</span></button><button id="deleteBtn" class="action-btn">⌫ <span>Delete</span></button><button id="addTrackBtn" class="action-btn">＋ <span>Track</span></button><span class="toolbar-sep"></span><button id="zoomOut" class="zoom-btn">−</button><input type="range" min="30" max="150" value="70" id="zoomRange"><button id="zoomIn" class="zoom-btn">＋</button></div></div>
+   <div class="ruler" id="ruler"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span><span>00:20</span><span>00:25</span></div>
+   <div class="tracks-area" id="tracksArea"><div class="track-labels"><div><b class="track-ico video-ico">▣</b><span>Video</span></div><div><b class="track-ico photo-ico">▧</b><span>Overlay</span></div><div><b class="track-ico audio-ico">♫</b><span>Audio</span></div></div>
+    <div class="track-lanes"><div class="track-lane" id="videoLane"><div class="lane-placeholder">Your video clips will appear here</div></div><div class="track-lane" id="overlayLane"></div><div class="track-lane" id="audioLane"></div><div class="playhead" id="playhead"><i></i></div></div>
+   </div><div class="timeline-bottom"><span>DRAG CLIPS TO REARRANGE · MOVE PLAYHEAD TO SPLIT</span><span>ZOOM TIMELINE</span></div>
   </section>
  </section>
- <aside class="properties-panel">
-  <div class="panel-heading"><div><p class="eyebrow">QUICK EDIT</p><h2>Properties</h2></div><span class="sliders-icon">☷</span></div>
-  <div class="property-section"><h3>Selected clip</h3><div class="selected-card"><div class="selected-icon">▣</div><div><strong id="selectedName">No clip selected</strong><small id="selectedMeta">Choose a clip on the timeline</small></div></div></div>
-  <div class="property-section"><h3>Transform</h3><label>Scale <output id="scaleOut">100%</output></label><input id="scaleSlider" type="range" min="25" max="200" value="100"><div class="two-fields"><div><label>X position</label><input id="posX" type="number" value="0"></div><div><label>Y position</label><input id="posY" type="number" value="0"></div></div></div>
-  <div class="property-section"><h3>Audio</h3><label>Clip volume <output id="volumeOut">100%</output></label><input id="volumeSlider" type="range" min="0" max="150" value="100"><label class="check-row"><input id="muteOriginal" type="checkbox"> Mute original video sound</label><button class="outline-wide" id="addAudioBtn">＋ Add background music</button></div>
-  <div class="property-section"><h3>Text overlay</h3><input class="text-input" id="overlayInput" placeholder="Type your text here"><div class="two-fields"><div><label>Text color</label><input id="textColor" type="color" value="#ffffff"></div><div><label>Font size</label><input id="textSize" type="number" min="12" max="100" value="32"></div></div><button class="outline-wide" id="applyTextBtn">＋ Add / update text</button></div>
-  <div class="property-section"><h3>Canvas</h3><select id="aspectSelect"><option value="16/9">Landscape · 16:9</option><option value="9/16">Portrait · 9:16</option><option value="1/1">Square · 1:1</option><option value="4/5">Social · 4:5</option></select></div>
-  <div class="help-note">Your project is processed locally in this browser. Keep this tab open while exporting.</div>
+ <aside class="inspector-panel"><div class="inspector-heading"><div><span class="section-kicker">FINE TUNE</span><h2>Inspector</h2></div><span class="inspector-glyph">☷</span></div>
+  <div class="inspector-section"><div class="inspector-title"><h3>Selected layer</h3><span class="tiny-pill">ACTIVE</span></div><div class="selected-card"><div class="selected-icon">▣</div><div><strong id="selectedName">Nothing selected</strong><small id="selectedMeta">Select a clip to edit</small></div></div></div>
+  <div class="inspector-section"><h3>Transform</h3><label>Scale <output id="scaleOut">100%</output></label><input id="scaleSlider" type="range" min="25" max="200" value="100"><div class="field-grid"><div><label>X position</label><input id="posX" type="number" value="0"></div><div><label>Y position</label><input id="posY" type="number" value="0"></div></div></div>
+  <div class="inspector-section"><h3>Sound</h3><label>Clip volume <output id="volumeOut">100%</output></label><input id="volumeSlider" type="range" min="0" max="150" value="100"><label class="check-row"><input id="muteOriginal" type="checkbox"> Mute original video sound</label><button class="outline-wide" id="addAudioBtn">＋ Add background music</button></div>
+  <div class="inspector-section"><h3>Text & typography</h3><input class="text-input" id="overlayInput" placeholder="Write something memorable..."><div class="field-grid"><div><label>Text color</label><input id="textColor" type="color" value="#ffffff"></div><div><label>Font size</label><input id="textSize" type="number" min="12" max="100" value="32"></div></div><button class="outline-wide" id="applyTextBtn">＋ Add text to preview</button></div>
+  <div class="inspector-section"><h3>Canvas format</h3><select id="aspectSelect"><option value="16/9">Landscape · 16:9</option><option value="9/16">Portrait · 9:16</option><option value="1/1">Square · 1:1</option><option value="4/5">Social · 4:5</option></select></div>
+  <div class="inspector-tip"><b>✦ Studio tip</b><span>Use Split to cut a clip at the playhead. Select each part to manage your edit.</span></div>
  </aside>
 </main>
-<footer class="site-footer"><span class="footer-brand">MY STUDIO <i>×</i> PALIAAPK HUB</span><span>Make every frame yours.</span><a href="https://github.com/shanpalia" target="_blank" rel="noopener">DEVELOPED BY SHANPALIA ↗</a></footer>
-<input type="file" id="fileInput" accept="video/*,audio/*,image/*" multiple hidden>
-<input type="file" id="videoInput" accept="video/*" hidden>
-<input type="file" id="audioInput" accept="audio/*" hidden>
-<input type="file" id="imageInput" accept="image/*" hidden>
-<div class="toast" id="toast"></div>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/umd/ffmpeg.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/umd/index.js"></script>
-<script src="app.js"></script>
+<footer class="site-footer"><span class="footer-brand">MY STUDIO <i>✳</i> PALIAAPK HUB</span><span>CREATE WITHOUT LIMITS.</span><a href="https://github.com/shanpalia" target="_blank" rel="noopener">DEVELOPED BY SHANPALIA ↗</a></footer>
+<input type="file" id="fileInput" accept="video/*,audio/*,image/*" multiple hidden><input type="file" id="videoInput" accept="video/*" hidden><input type="file" id="audioInput" accept="audio/*" hidden><input type="file" id="imageInput" accept="image/*" hidden><div class="toast" id="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/umd/ffmpeg.js"></script><script src="https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/umd/index.js"></script><script src="app.js"></script>
 </body></html>
